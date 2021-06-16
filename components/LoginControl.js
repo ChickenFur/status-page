@@ -1,12 +1,18 @@
 import * as React from 'react';
 
-const LoginControl = ({ isLoggedIn, login, logout }) => {
-  debugger;
+const LoginControl = ({ isLoggedIn }) => {
+  const login = () => {
+    console.log('login will happen');
+  };
+
+  const logout = () => {
+    console.log('logout now');
+  };
   let button;
   if (isLoggedIn) {
-    button = <LogoutButton onClick={this.logout} />;
+    button = <LogoutButton onClick={login} />;
   } else {
-    button = <LoginButton onClick={this.login} />;
+    button = <LoginButton onClick={logout} />;
   }
 
   return <div>Hey {button}. This should work</div>;
